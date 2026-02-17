@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4F4F4;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav{
+    display: flex;
+    gap: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+    flex: 1;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card3{
+    margin-bottom: 10px;
+}
+.card p{
+    text-align: center;
+}
+@media (max-width: 768px) {
+    /* Header: Empilha logo e nav verticalmente, centraliza tudo */
+    .header {
+        flex-direction: column; /* Muda para coluna: logo em cima, nav embaixo */
+        align-items: center; /* Centraliza horizontalmente */
+        padding: 15px; /* Reduz padding para economizar espaço */
+    }
+
+    .logo {
+        font-size: 20px; /* Fonte menor */
+        margin-bottom: 10px; /* Espaço entre logo e nav */
+    }
+
+    .nav {
+        flex-direction: column; /* Links em coluna */
+        gap: 10px; /* Menos espaço entre links */
+    }
+
+    .nav a {
+        font-size: 16px; /* Fonte menor */
+    }
+
+    /* Main: Ajusta cards para telas pequenas */
+    .main {
+        padding: 20px; /* Menos padding */
+        gap: 15px; /* Menos espaço entre cards */
+    }
+
+    .card {
+        width: 100%; /* Cards ocupam largura total (um por linha) */
+        max-width: 300px; /* Limita largura máxima para não esticar demais */
+        padding: 15px; /* Menos padding interno */
+    }
+
+    .card h3 {
+        font-size: 18px; /* Fonte menor */
+    }
+
+    .card p {
+        font-size: 14px; /* Fonte menor */
+    }
+}
+
+/* Media Query extra para celulares muito pequenos (até 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px; /* Ainda menos padding */
+    }
+
+    .logo {
+        font-size: 18px; /* Fonte ainda menor */
+    }
+
+    .main {
+        padding: 15px; /* Menos espaço */
+    }
+
+    .card {
+        padding: 10px; /* Compacto */
+    }
+}
